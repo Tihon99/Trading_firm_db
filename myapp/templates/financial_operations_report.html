@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Operations Report</title>
+</head>
+<body>
+    <h1>Financial Operations Report</h1>
+    <h2>Orders</h2>
+    <ul>
+        {% for order in financial_operations %}
+            {% if order.order_id %}
+                <li>
+                    <strong>Order ID:</strong> {{ order.order_id }},
+                    <strong>Date:</strong> {{ order.date }},
+                    <strong>Amount:</strong> ${{ order.amount }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h2>Returns</h2>
+    <ul>
+        {% for return in financial_operations %}
+            {% if return.return_id %}
+                <li>
+                    <strong>Return ID:</strong> {{ return.return_id }},
+                    <strong>Date:</strong> {{ return.date }},
+                    <strong>Amount Refunded:</strong> ${{ return.amount_refunded }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h2>Supplier Orders</h2>
+    <ul>
+        {% for supplier_order in financial_operations %}
+            {% if supplier_order.supplier_order_id %}
+                <li>
+                    <strong>Supplier Order ID:</strong> {{ supplier_order.supplier_order_id }},
+                    <strong>Date:</strong> {{ supplier_order.date }},
+                    <strong>Amount:</strong> ${{ supplier_order.amount }}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

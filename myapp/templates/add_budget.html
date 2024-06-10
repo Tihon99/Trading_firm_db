@@ -1,0 +1,15 @@
+<!-- templates/myapp/add_budget.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Budget</title>
+</head>
+<body>
+    <h1>Add Budget</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

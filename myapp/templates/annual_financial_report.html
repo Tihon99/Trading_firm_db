@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Annual Financial Report</title>
+</head>
+<body>
+    <h1>Annual Financial Report</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+        {% for change in budget_changes %}
+        <tr>
+            <td>{{ change.date }}</td>
+            <td>{{ change.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+</head>
+<body>
+    <h1>Main Page</h1>
+    <ul>
+        <li><a href="{% url 'create_order' %}">Create Order</a></li>
+        <li><a href="{% url 'create_supplier_order' %}">Create Supplier Order</a></li>
+        <li><a href="{% url 'create_return' %}">Create Return</a></li>
+        <li><a href="{% url 'warehouse_report' %}">Warehouse Report</a></li>
+        <li><a href="{% url 'orders_report' %}">Orders Report</a></li>
+        <li><a href="{% url 'financial_report' %}">Financial Report</a></li>
+        <li><a href="{% url 'financial_analysis' %}">Annual Financial Report</a></li>
+    </ul>
+</body>
+</html>

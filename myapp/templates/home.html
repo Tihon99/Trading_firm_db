@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Home Page</h1>
+    <p><a href="{% url 'create_order' %}">Создать заказ</a></p>
+    <p><a href="{% url 'create_supplier_order' %}">Создать заказ поставщику</a></p>
+    <p><a href="{% url 'warehouse_status' %}">Статус склада</a></p>
+    <p><a href="{% url 'fulfilled_orders' %}">Список заказов</a></p>
+    <p><a href="{% url 'financial_status' %}">Текущий бюджет</a></p>
+    <p><a href="{% url 'yearly_financial_report' %}">Годовой отчет</a></p>
+</body>
+</html>

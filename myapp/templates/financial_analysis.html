@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Analysis</title>
+</head>
+<body>
+    <h1>Financial Analysis for {{ current_year }}</h1>
+
+    <h2>Orders</h2>
+    <table border="1">
+        <tr>
+            <th>Order Date</th>
+            <th>Order ID</th>
+            <th>Total Price</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order.orderDate }}</td>
+            <td>{{ order.id }}</td>
+            <td>{{ order.total_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Supplier Orders</h2>
+    <table border="1">
+        <tr>
+            <th>Order Date</th>
+            <th>Order ID</th>
+            <th>Total Price</th>
+        </tr>
+        {% for supplier_order in supplier_orders %}
+        <tr>
+            <td>{{ supplier_order.orderDate }}</td>
+            <td>{{ supplier_order.id }}</td>
+            <td>{{ supplier_order.total_price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
